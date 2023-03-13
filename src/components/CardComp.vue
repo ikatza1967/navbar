@@ -5,11 +5,17 @@
                     <p v-if="parrafo" class="card-text">
                         {{ parrafo }}
                     </p>
-                    <slot></slot>
-                    <div class="d-grid">
-
+                    <slot name="default"></slot>
+                    <div class="d-grid gap-2">
+                        <button 
+                        v-for='btn in btns' 
+                        :key="btn.txt" class="btn" 
+                        :class="btn.class">{{ btn.txt}}
+                    </button>
+                    <slot name='footer'></slot>
+                    
                     </div>
-                    <button class="btn" :class="btns.class">{{ btns.txt}}</button>
+                   
                     </div>
                 </div>
 </template>

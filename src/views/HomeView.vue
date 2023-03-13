@@ -28,7 +28,9 @@ export default {
     .home{
       background-color: rgb(77, 3, 87);
       padding-bottom: 2rem;
-    
+      min-width: 895px;
+      min-height: 60vh;
+      margin: auto;
     }
 
     h2{
